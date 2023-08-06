@@ -10,10 +10,18 @@ public class Main {
 //        sda.insert(1,30);
 //        sda.insert(12,120);
 
-        var firstElement = sda.arr[0];
-        System.out.println(firstElement);
-        var thirdElement = sda.arr[3];
-        System.out.println(thirdElement);
+//        var firstElement = sda.arr[0];
+//        System.out.println(firstElement);
+//        var thirdElement = sda.arr[3];
+//        System.out.println(thirdElement);
 
+        // Array Traversal
+//        sda.traverseArray();
+
+        // Search in array
+//        sda.searchInArray(20);
+        sda.deleteValue(0);
+        System.out.println(sda.arr[0]);
     }
+
 }

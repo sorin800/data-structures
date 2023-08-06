@@ -1,5 +1,7 @@
 package main;
 
+import java.lang.reflect.Array;
+
 public class SingleDimensionArray {
 
     int arr[] = null;
@@ -27,8 +29,34 @@ public class SingleDimensionArray {
 
     // Array Traversal
     public void traverseArray() {
+        try {
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + " ");
+            }
+        } catch (Exception e) {
+            System.out.println("Array no longer exists!");
+        }
+
+    }
+
+    //Search for an element in the given array
+    public void searchInArray(int valueToSearch) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            if (arr[i] == valueToSearch) {
+                System.out.println("Value is found at the index of " + i);
+                return;
+            }
+        }
+        System.out.println("Value to search: " + valueToSearch + " is not found!");
+    }
+
+    // Delete value from array
+    public void deleteValue(int valueToDeleteIndex) {
+        try {
+            arr[valueToDeleteIndex] = Integer.MIN_VALUE;
+            System.out.println("The value has been deleted successfully!");
+        } catch (ArrayIndexOutOfBoundsException a) {
+            System.out.println("The value that is provided ");
         }
     }
 
